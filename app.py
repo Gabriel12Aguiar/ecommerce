@@ -236,5 +236,7 @@ def checkout():
      return jsonify ({'message': 'Checkout successful. Cart has been cleared.'})
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+from flask import Request, Response
+
+def handler(request: Request) -> Response:
+    return app(request.environ, start_response)
