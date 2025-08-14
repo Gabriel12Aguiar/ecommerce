@@ -119,7 +119,8 @@ def get_products():
         product_data = {
             "name": product.name,
             "price": product.price,
-            "category": product.category
+            "category": product.category,
+            "id": product.id
         }
         products_list.append(product_data)
 
